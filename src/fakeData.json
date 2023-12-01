@@ -1,0 +1,42 @@
+[
+  {
+    "createdAt": "2023-11-03T02:07:09.423Z",
+    "nickname": "뽀뽀몬",
+    "avatar": "https://mblogthumb-phinf.pstatic.net/MjAxNjEyMDVfMTc3/MDAxNDgwOTM2OTg0NjMz.m01pTShf8YTAxdY9IU5G1buow3vaKAth36v3wwN7YN8g.zQDK715DerHe8IXiQ_S5vKumt0WA4tbUWM1NRoK6WvIg.JPEG.studygir/qozb_%289%29.jpg?type=w2",
+    "content": "짱구야, 항상 명랑한 에너지로 주변을 밝게 만들어 주는 너에게 고마워 그럼 안녕!",
+    "writedTo": "짱구",
+    "id": "1"
+  },
+  {
+    "createdAt": "2023-11-02T23:13:18.491Z",
+    "nickname": "새싹이",
+    "avatar": "https://mblogthumb-phinf.pstatic.net/MjAyMTA0MDVfNjkg/MDAxNjE3NTUwMDA5OTEx.KyKQjl3D2BM3w5-P4oxrt7bjHJtcr3ASTo7FWVBWFYIg.w08gRxcdpt0ws4b5pFNrYLpmV6gsceiipwBfq1JluAwg.JPEG.se413496/ea025fa1eb6c40ea08071bf4b828d9cb.jpg?type=w800",
+    "content": "귀여운 맹구에게, 네 귀여움과 장난기 넘치는 에너지가 우리 모두를 즐겁게 만들어 줘. 그럼 안녕!",
+    "writedTo": "맹구",
+    "id": "2"
+  },
+  {
+    "createdAt": "2023-11-02T11:25:37.026Z",
+    "nickname": "꼬부기",
+    "avatar": "https://i.pinimg.com/564x/0f/3b/7e/0f3b7eb75241edeb7629509f8df3fc65.jpg",
+    "content": "안녕, 철수! 네 친절하고 현실적인 성향이 우리에게 큰 도움이 돼.앞으로도 함께 많은 추억 만들자! 그럼 안녕!",
+    "writedTo": "철수",
+    "id": "3"
+  },
+  {
+    "createdAt": "2023-11-02T16:06:34.150Z",
+    "nickname": "닭발좀그만먹자",
+    "avatar": "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FFW9P0%2Fbtr3cdcq0Ja%2FglNKVJY7PODaGhR9g3D6PK%2Fimg.jpg",
+    "content": "훈이야, 네 착한 마음과 성실함이 대단해. 항상 노력하는 모습이 멋져! 그럼 안녕!",
+    "writedTo": "훈이",
+    "id": "4"
+  },
+  {
+    "createdAt": "2023-11-03T05:40:17.575Z",
+    "nickname": "떡볶이랑콩나물",
+    "avatar": "https://i.pinimg.com/236x/bd/b0/51/bdb051af357f05f94784f98872b7cb13.jpg",
+    "content": "안녕, 유리! 네 예쁜 미소가 우리 모두를 행복하게 만들어. 항상 긍정적인 에너지를 줘서 고마워. 그럼 안녕!",
+    "writedTo": "유리",
+    "id": "5"
+  }
+]
