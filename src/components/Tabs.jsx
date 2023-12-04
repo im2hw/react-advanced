@@ -1,19 +1,23 @@
-import React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
+import { useDispatch, useSelector } from "react-redux";
 
 import 맹구 from "../assets/맹구.webp";
 import 짱구 from "../assets/신짱구.png";
 import 유리 from "../assets/유리.webp";
 import 철수 from "../assets/철수.webp";
 import 훈이 from "../assets/훈이.webp";
+import { setMember } from "redux/config/modules/memberSlice";
 
-function Tabs({ activeMember, setActiveMember, letters }) {
+function Tabs() {
+  const activeMember = useSelector((state) => state.member);
+  console.log(activeMember);
+  const dispatch = useDispatch();
   const onActiveMember = (event) => {
     if (event.target === event.currentTarget) return;
 
     const imageData = event.target.getAttribute("data-image-info");
 
-    setActiveMember(imageData);
+    dispatch(setMember(imageData));
   };
 
   return (
@@ -47,7 +51,7 @@ const TabsWrapper = styled.ul`
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-evenly;
-  width: 100%;
+  width: 800px;
   padding: 12px;
   gap: 12px;
   border-radius: 12px;
@@ -74,28 +78,6 @@ const TabsWrapper = styled.ul`
     font-weight: 800;
     cursor: pointer;
   }
-`;
-
-const Tab = styled.li`
-  ${(props) => {
-    if (props.$activeMember === props.children) {
-      return css`
-        background-color: orange;
-        color: black;
-      `;
-    }
-    return css`
-      background-color: #eee;
-      color: #333;
-    `;
-  }}
-
-  font-size: 20px;
-  width: 65px;
-  text-align: center;
-  padding: 10px 6px;
-  border-radius: 12px;
-  cursor: pointer;
 `;
 
 export default Tabs;
