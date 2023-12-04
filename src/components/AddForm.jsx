@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Button from "common/Button";
 import { v4 as uuid } from "uuid";
+import { useDispatch } from "react-redux";
+import { addLetter } from "redux/config/modules/lettersSlice";
 
-export default function AddForm({ setLetters }) {
+export default function AddForm() {
+  const dispatch = useDispatch();
   const [nickname, setNickname] = useState("");
   const [content, setContent] = useState("");
   const [member, setMember] = useState("훈이");
@@ -21,7 +24,7 @@ export default function AddForm({ setLetters }) {
       createdAt: new Date(),
     };
 
-    setLetters((prev) => [newLetter, ...prev]);
+    dispatch(addLetter(newLetter));
     setNickname("");
     setContent("");
   };
@@ -65,7 +68,7 @@ export default function AddForm({ setLetters }) {
 }
 
 const Form = styled.form`
-  background-color: #d2ff9c;
+  background-color: #a8df8e;
   padding: 12px;
   display: flex;
   flex-direction: column;

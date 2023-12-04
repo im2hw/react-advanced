@@ -6,8 +6,13 @@ import { getFormattedDate } from "util/data";
 import Button from "common/Button";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { deleteLetter, editLetter } from "redux/config/modules/lettersSlice";
 
-function Details({ letters, setLetters }) {
+function Details() {
+  const dispatch = useDispatch();
+  const letters = useSelector((state) => state.letters);
+  console.log(letters);
   const [isEditing, setIsEditing] = useState(false);
   const [editingText, setEditingText] = useState("");
   const navigate = useNavigate();
@@ -19,21 +24,15 @@ function Details({ letters, setLetters }) {
   const onDeleteBtn = () => {
     const answer = window.confirm("정말 삭제하시겠습니까?");
     if (!answer) return;
-    const newLetters = letters.filter((letter) => letter.id !== id);
+
     navigate("/");
-    setLetters(newLetters);
+    dispatch(deleteLetter(id));
   };
 
   const onEditedDone = () => {
     if (!editingText) return alert("수정사항이 없습니다.");
 
-    const newLetters = letters.map((letter) => {
-      if (letter.id === id) {
-        return { ...letter, content: editingText };
-      }
-      return letter;
-    });
-    setLetters(newLetters);
+    dispatch(editLetter({ id, editingText }));
     setIsEditing(false);
     setEditingText("");
   };
@@ -48,7 +47,7 @@ function Details({ letters, setLetters }) {
       <DetailWrapper>
         <UserInfo>
           <AvatarAndNickName>
-            <Avatar src={avatar} size={"large"} />
+            <Avatar src={avatar ? avatar : null} size={"large"} />
             <NickName>{nickname}</NickName>
           </AvatarAndNickName>
           <time>{getFormattedDate(createdAt)}</time>

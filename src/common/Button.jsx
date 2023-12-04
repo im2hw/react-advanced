@@ -17,8 +17,9 @@ const ButtonWrapper = styled.div`
   & button {
     width: 80px;
     height: 30px;
-    border-radius: 12px;
+    border-radius: 8px;
     border: none;
-    background-color: #ffc46c;
+    color: white;
+    background-color: #f36b6b;
   }
 `;

@@ -1,19 +1,17 @@
 import React from "react";
 import styled from "styled-components";
+import Tabs from "components/Tabs";
 import Header from "components/Header";
 import AddForm from "components/AddForm";
 import LetterList from "components/LetterList";
-import { useState } from "react";
 
-function Home({ letters, setLetters }) {
-  const [activeMember, setActiveMember] = useState("훈이");
-  console.log(activeMember);
+function Home() {
   return (
     <Container>
-      {/* props drilling */}
-      <Header activeMember={activeMember} setActiveMember={setActiveMember} />
-      <AddForm setLetters={setLetters} />
-      <LetterList activeMember={activeMember} letters={letters} />
+      <Header />
+      <Tabs />
+      <AddForm />
+      <LetterList />
     </Container>
   );
 }
@@ -21,10 +19,11 @@ function Home({ letters, setLetters }) {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  background-color: lightyellow;
+  justify-content: space-between;
+  background-color: white;
   align-items: center;
   height: 100vh;
+  padding: 20px;
 `;
 
 export default Home;

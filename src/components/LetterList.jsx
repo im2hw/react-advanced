@@ -1,8 +1,11 @@
 import React from "react";
 import LetterCard from "./LetterCard";
 import styled from "styled-components";
+import { useSelector } from "react-redux";
 
-function LetterList({ activeMember, letters }) {
+function LetterList() {
+  const activeMember = useSelector((state) => state.member);
+  const letters = useSelector((state) => state.letters);
   const filteredLetters = letters.filter(
     (letter) => letter.writedTo === activeMember
   );
@@ -32,7 +35,7 @@ const ListWrapper = styled.ul`
   border-radius: 12px;
   padding: 12px;
   color: white;
-  background-color: lightsalmon;
+  background-color: #78c1f3;
 
   & span {
     font-weight: bold;

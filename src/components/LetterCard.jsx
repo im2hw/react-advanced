@@ -6,7 +6,6 @@ import { getFormattedDate } from "util/data";
 
 export default function LetterCard({ letter }) {
   const navigate = useNavigate();
-
   return (
     <LetterWrapper onClick={() => navigate(`/details/${letter.id}`)}>
       <UserInfo>
